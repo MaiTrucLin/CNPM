@@ -7,3 +7,6 @@ F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKG
 F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.csproj.GenerateResource.Cache
 F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.exe
 F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.pdb
+D:\Congnghephanmem\CongNghePhanMem\CNPM\XDPMQL_CuahangPKGaming\bin\Debug\XDPMQL_CuahangPKGaming.exe.config
+D:\Congnghephanmem\CongNghePhanMem\CNPM\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.exe
+D:\Congnghephanmem\CongNghePhanMem\CNPM\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.pdb
