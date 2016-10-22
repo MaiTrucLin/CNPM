@@ -1,0 +1,9 @@
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\bin\Debug\XDPMQL_CuahangPKGaming.exe.config
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\bin\Debug\XDPMQL_CuahangPKGaming.exe
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\bin\Debug\XDPMQL_CuahangPKGaming.pdb
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.csprojResolveAssemblyReference.cache
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.Form1.resources
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.Properties.Resources.resources
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.csproj.GenerateResource.Cache
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.exe
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKGaming\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.pdb
