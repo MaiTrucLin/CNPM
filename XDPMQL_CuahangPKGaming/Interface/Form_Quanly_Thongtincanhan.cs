@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace XDPMQL_CuahangPKGaming.Interface
 {
-    public partial class Form_Quanly : Form
+    public partial class Form_Quanly_Thongtincanhan : Form
     {
-        public Form_Quanly()
+        public Form_Quanly_Thongtincanhan()
         {
             InitializeComponent();
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void quanLyTaiKhaonToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip_QLNV_Captaikhoan_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
 
         }

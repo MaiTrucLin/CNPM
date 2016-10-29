@@ -10,3 +10,6 @@ F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\SorceCode\XDPMQL_CuahangPKG
 D:\Congnghephanmem\CongNghePhanMem\CNPM\XDPMQL_CuahangPKGaming\bin\Debug\XDPMQL_CuahangPKGaming.exe.config
 D:\Congnghephanmem\CongNghePhanMem\CNPM\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.exe
 D:\Congnghephanmem\CongNghePhanMem\CNPM\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.pdb
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\GitHub\CNPM\XDPMQL_CuahangPKGaming\bin\Debug\XDPMQL_CuahangPKGaming.exe.config
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\GitHub\CNPM\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.exe
+F:\NiceDeveloper\Developer\Year3\SoftwareEngeneering\GitHub\CNPM\XDPMQL_CuahangPKGaming\obj\Debug\XDPMQL_CuahangPKGaming.pdb
