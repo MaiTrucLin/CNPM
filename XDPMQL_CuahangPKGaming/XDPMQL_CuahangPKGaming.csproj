@@ -53,11 +53,23 @@
     <Compile Include="Interface\Form_Begin.Designer.cs">
       <DependentUpon>Form_Begin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\Form_Doimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Form_Doimatkhau.Designer.cs">
+      <DependentUpon>Form_Doimatkhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interface\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Form_QLKDPK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Form_QLKDPK.Designer.cs">
+      <DependentUpon>Form_QLKDPK.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\Form_Quanly.cs">
       <SubType>Form</SubType>
@@ -65,16 +77,31 @@
     <Compile Include="Interface\Form_Quanly.Designer.cs">
       <DependentUpon>Form_Quanly.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\Form_Quanly_Thongtincanhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Form_Quanly_Thongtincanhan.Designer.cs">
+      <DependentUpon>Form_Quanly_Thongtincanhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interface\Form_Begin.resx">
       <DependentUpon>Form_Begin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Form_Doimatkhau.resx">
+      <DependentUpon>Form_Doimatkhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Form_QLKDPK.resx">
+      <DependentUpon>Form_QLKDPK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface\Form_Quanly.resx">
       <DependentUpon>Form_Quanly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Form_Quanly_Thongtincanhan.resx">
+      <DependentUpon>Form_Quanly_Thongtincanhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
