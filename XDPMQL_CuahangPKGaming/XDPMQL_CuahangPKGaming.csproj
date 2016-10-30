@@ -65,6 +65,12 @@
     <Compile Include="Interface\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\Form_Nhanvienbaohanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Form_Nhanvienbaohanh.Designer.cs">
+      <DependentUpon>Form_Nhanvienbaohanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Form_QLKDPK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     </Compile>
     <Compile Include="Interface\Form_Quanly.Designer.cs">
       <DependentUpon>Form_Quanly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Form_Quanlykho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Form_Quanlykho.Designer.cs">
+      <DependentUpon>Form_Quanlykho.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\Form_Quanly_Thongtincanhan.cs">
       <SubType>Form</SubType>
@@ -94,11 +106,17 @@
     <EmbeddedResource Include="Interface\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Form_Nhanvienbaohanh.resx">
+      <DependentUpon>Form_Nhanvienbaohanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface\Form_QLKDPK.resx">
       <DependentUpon>Form_QLKDPK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Form_Quanly.resx">
       <DependentUpon>Form_Quanly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Form_Quanlykho.resx">
+      <DependentUpon>Form_Quanlykho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Form_Quanly_Thongtincanhan.resx">
       <DependentUpon>Form_Quanly_Thongtincanhan.cs</DependentUpon>
