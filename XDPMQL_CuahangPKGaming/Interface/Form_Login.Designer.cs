@@ -98,6 +98,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnHuyboDN
             // 
@@ -108,6 +109,7 @@
             this.btnHuyboDN.TabIndex = 7;
             this.btnHuyboDN.Text = "Huỷ bỏ";
             this.btnHuyboDN.UseVisualStyleBackColor = true;
+            this.btnHuyboDN.Click += new System.EventHandler(this.btnHuyboDN_Click);
             // 
             // panel1
             // 
@@ -148,6 +150,8 @@
             this.MinimizeBox = false;
             this.Name = "Form_Login";
             this.Text = "Đăng nhập";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.f_FormClosed);
+            this.Load += new System.EventHandler(this.Form_Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
