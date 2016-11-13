@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GamingGearModelStoreContainer" CdmEntityContainer="GamingGearEntities">
+    <EntitySetMapping Name="HANGs">
+      <EntityTypeMapping TypeName="GamingGearModel.HANG">
+        <MappingFragment StoreEntitySet="HANG">
+          <ScalarProperty Name="MaHANG" ColumnName="MaHANG" />
+          <ScalarProperty Name="Tenhang" ColumnName="Tenhang" />
+          <ScalarProperty Name="Quocgia" ColumnName="Quocgia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADONs">
+      <EntityTypeMapping TypeName="GamingGearModel.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="MaTToan" ColumnName="MaTToan" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="NgayxuatHD" ColumnName="NgayxuatHD" />
+          <ScalarProperty Name="TongTienTT" ColumnName="TongTienTT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KIEUPKs">
+      <EntityTypeMapping TypeName="GamingGearModel.KIEUPK">
+        <MappingFragment StoreEntitySet="KIEUPK">
+          <ScalarProperty Name="MakieuPK" ColumnName="MakieuPK" />
+          <ScalarProperty Name="TenkieuPK" ColumnName="TenkieuPK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIPKs">
+      <EntityTypeMapping TypeName="GamingGearModel.LOAIPK">
+        <MappingFragment StoreEntitySet="LOAIPK">
+          <ScalarProperty Name="MaloaiPK" ColumnName="MaloaiPK" />
+          <ScalarProperty Name="TenloaiPK" ColumnName="TenloaiPK" />
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
+          <ScalarProperty Name="MaHANG" ColumnName="MaHANG" />
+          <ScalarProperty Name="Thoigianbaohanh" ColumnName="Thoigianbaohanh" />
+          <ScalarProperty Name="Soluongcuahang" ColumnName="Soluongcuahang" />
+          <ScalarProperty Name="Soluongkho" ColumnName="Soluongkho" />
+          <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHACUNGCAPs">
+      <EntityTypeMapping TypeName="GamingGearModel.NHACUNGCAP">
+        <MappingFragment StoreEntitySet="NHACUNGCAP">
+          <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+          <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
+          <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+          <ScalarProperty Name="soFax" ColumnName="soFax" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENs">
+      <EntityTypeMapping TypeName="GamingGearModel.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+          <ScalarProperty Name="Chucvu" ColumnName="Chucvu" />
+          <ScalarProperty Name="Luong" ColumnName="Luong" />
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHUKIENs">
+      <EntityTypeMapping TypeName="GamingGearModel.PHUKIEN">
+        <MappingFragment StoreEntitySet="PHUKIEN">
+          <ScalarProperty Name="MaPK" ColumnName="MaPK" />
+          <ScalarProperty Name="MaloaiPK" ColumnName="MaloaiPK" />
+          <ScalarProperty Name="MakieuPK" ColumnName="MakieuPK" />
+          <ScalarProperty Name="Thoigianbaohanh" ColumnName="Thoigianbaohanh" />
+          <ScalarProperty Name="TTDaban" ColumnName="TTDaban" />
+          <ScalarProperty Name="Vitri" ColumnName="Vitri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHUKIENBAOHANHs">
+      <EntityTypeMapping TypeName="GamingGearModel.PHUKIENBAOHANH">
+        <MappingFragment StoreEntitySet="PHUKIENBAOHANH">
+          <ScalarProperty Name="MaPK" ColumnName="MaPK" />
+          <ScalarProperty Name="Thoigianbaohanh" ColumnName="Thoigianbaohanh" />
+          <ScalarProperty Name="Hantra" ColumnName="Hantra" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="Ngayhoantra" ColumnName="Ngayhoantra" />
+          <ScalarProperty Name="Ngayhoantrathucte" ColumnName="Ngayhoantrathucte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIKHOANs">
+      <EntityTypeMapping TypeName="GamingGearModel.TAIKHOAN">
+        <MappingFragment StoreEntitySet="TAIKHOAN">
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Pw" ColumnName="Pw" />
+          <ScalarProperty Name="Phanquyen" ColumnName="Phanquyen" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THANHTOANs">
+      <EntityTypeMapping TypeName="GamingGearModel.THANHTOAN">
+        <MappingFragment StoreEntitySet="THANHTOAN">
+          <ScalarProperty Name="MaTToan" ColumnName="MaTToan" />
+          <ScalarProperty Name="MaPK" ColumnName="MaPK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="GamingGearModel.Store.SanphamHang" FunctionImportName="SanphamHang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GamingGearModel.SanphamHang_Result">
+          <ScalarProperty Name="MaPK" ColumnName="MaPK" />
+          <ScalarProperty Name="TenloaiPK" ColumnName="TenloaiPK" />
+          <ScalarProperty Name="TenkieuPK" ColumnName="TenkieuPK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="GamingGearModel.Store.TongKPK" FunctionImportName="TongKPK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GamingGearModel.TongKPK_Result">
+          <ScalarProperty Name="MakieuPK" ColumnName="MakieuPK" />
+          <ScalarProperty Name="TenkieuPK" ColumnName="TenkieuPK" />
+          <ScalarProperty Name="Tongsopk" ColumnName="Tongsopk" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="GamingGearModel.Store.TongPK" FunctionImportName="TongPK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GamingGearModel.TongPK_Result">
+          <ScalarProperty Name="MaloaiPK" ColumnName="MaloaiPK" />
+          <ScalarProperty Name="TenloaiPK" ColumnName="TenloaiPK" />
+          <ScalarProperty Name="Tongsopk" ColumnName="Tongsopk" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="GamingGearModel.Store.XEMDSPK" FunctionImportName="XEMDSPK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GamingGearModel.XEMDSPK_Result">
+          <ScalarProperty Name="MaPK" ColumnName="MaPK" />
+          <ScalarProperty Name="TenloaiPK" ColumnName="TenloaiPK" />
+          <ScalarProperty Name="MakieuPK" ColumnName="MakieuPK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="GamingGearModel.Store.XEMPK" FunctionImportName="XEMPK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GamingGearModel.XEMPK_Result">
+          <ScalarProperty Name="TenloaiPK" ColumnName="TenloaiPK" />
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
+          <ScalarProperty Name="Thoigianbaohanh" ColumnName="Thoigianbaohanh" />
+          <ScalarProperty Name="Soluongcuahang" ColumnName="Soluongcuahang" />
+          <ScalarProperty Name="Soluongkho" ColumnName="Soluongkho" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DoiMatKhau" FunctionName="GamingGearModel.Store.DoiMatKhau" />
+  </EntityContainerMapping>
+</Mapping>

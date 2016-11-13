@@ -34,22 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.ExpressApp.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.ExpressApp.Win.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +55,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\DAB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DAB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DAB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\HANG.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\HOADON.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\KIEUPK.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\LOAIPK.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\NHACUNGCAP.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\NHANVIEN.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PHUKIEN.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PHUKIENBAOHANH.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SanphamHang_Result.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TAIKHOAN.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\THANHTOAN.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TongKPK_Result.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TongPK_Result.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\XEMDSPK_Result.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\XEMPK_Result.cs">
+      <DependentUpon>DAB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Form_Begin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +199,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Database\DAB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DAB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\DAB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DAB.edmx</DependentUpon>
+      <LastGenOutput>DAB.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Database\DAB.edmx.diagram">
+      <DependentUpon>DAB.edmx</DependentUpon>
+    </None>
+    <None Include="Database\DAB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DAB.edmx</DependentUpon>
+      <LastGenOutput>DAB.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -159,7 +231,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Database\" />
     <Folder Include="Disposer\" />
   </ItemGroup>
   <ItemGroup>

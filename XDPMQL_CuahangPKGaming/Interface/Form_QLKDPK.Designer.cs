@@ -109,7 +109,7 @@
             this.btn_Timkiem = new System.Windows.Forms.Button();
             this.txtBox_Timkiem = new System.Windows.Forms.TextBox();
             this.cbbTimkiem = new System.Windows.Forms.ComboBox();
-            this.dtgV = new System.Windows.Forms.DataGridView();
+            this.dtgVDSPK = new System.Windows.Forms.DataGridView();
             this.tbP_Thongkedoanhthu = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -192,7 +192,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVDSPK)).BeginInit();
             this.tbP_Thongkedoanhthu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -462,7 +462,7 @@
             this.tbP_Hoadonbanhang.Controls.Add(this.btn_Timkiem);
             this.tbP_Hoadonbanhang.Controls.Add(this.txtBox_Timkiem);
             this.tbP_Hoadonbanhang.Controls.Add(this.cbbTimkiem);
-            this.tbP_Hoadonbanhang.Controls.Add(this.dtgV);
+            this.tbP_Hoadonbanhang.Controls.Add(this.dtgVDSPK);
             this.tbP_Hoadonbanhang.Location = new System.Drawing.Point(4, 22);
             this.tbP_Hoadonbanhang.Name = "tbP_Hoadonbanhang";
             this.tbP_Hoadonbanhang.Padding = new System.Windows.Forms.Padding(3);
@@ -759,15 +759,15 @@
             this.cbbTimkiem.UseWaitCursor = true;
             this.cbbTimkiem.SelectedIndexChanged += new System.EventHandler(this.cbbTimkiem_SelectedIndexChanged);
             // 
-            // dtgV
+            // dtgVDSPK
             // 
-            this.dtgV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgV.Location = new System.Drawing.Point(7, 55);
-            this.dtgV.Name = "dtgV";
-            this.dtgV.Size = new System.Drawing.Size(402, 463);
-            this.dtgV.TabIndex = 0;
-            this.dtgV.UseWaitCursor = true;
-            this.dtgV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dtgVDSPK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgVDSPK.Location = new System.Drawing.Point(7, 55);
+            this.dtgVDSPK.Name = "dtgVDSPK";
+            this.dtgVDSPK.Size = new System.Drawing.Size(402, 463);
+            this.dtgVDSPK.TabIndex = 0;
+            this.dtgVDSPK.UseWaitCursor = true;
+            this.dtgVDSPK.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tbP_Thongkedoanhthu
             // 
@@ -1578,6 +1578,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_QLKDPK";
             this.Text = "Quản lý cửa hàng kinh doanh phụ kiện Gaming Gear";
+            this.Load += new System.EventHandler(this.Form_QLKDPK_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
@@ -1588,7 +1589,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVDSPK)).EndInit();
             this.tbP_Thongkedoanhthu.ResumeLayout(false);
             this.tbP_Thongkedoanhthu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
@@ -1662,7 +1663,7 @@
         private System.Windows.Forms.Button btn_Timkiem;
         private System.Windows.Forms.TextBox txtBox_Timkiem;
         private System.Windows.Forms.ComboBox cbbTimkiem;
-        private System.Windows.Forms.DataGridView dtgV;
+        private System.Windows.Forms.DataGridView dtgVDSPK;
         private System.Windows.Forms.TabPage tbP_Thongkedoanhthu;
         protected internal System.Windows.Forms.TabPage tbP_Hoadonbanhang;
         private System.Windows.Forms.TextBox textBox6;

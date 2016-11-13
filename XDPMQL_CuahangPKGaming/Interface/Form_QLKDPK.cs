@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XDPMQL_CuahangPKGaming.Database;
 
 namespace XDPMQL_CuahangPKGaming.Interface
 {
@@ -330,6 +331,29 @@ namespace XDPMQL_CuahangPKGaming.Interface
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form_QLKDPK_Load(object sender, EventArgs e)
+        {
+            Load_DSPK(dtgVDSPK);
+        }
+        void Load_DSPK(DataGridView dtgv)
+        {
+            using (GamingGearEntities db = new GamingGearEntities())
+            {
+                var source = from pk in db.PHUKIENs
+                             from lpk in db.LOAIPKs
+                             from kpk in db.KIEUPKs
+                             where pk.MakieuPK == kpk.MakieuPK & pk.MaloaiPK == lpk.MaloaiPK 
+                             select new{
+                              Mã_phụ_kiện = pk.MaloaiPK,
+                              Loại_phụ_kiện = lpk.MaloaiPK,
+                              Kiểu_phụ_kiện = kpk.TenkieuPK,
+                              Giá = lpk.Gia
+                             };
+
+                dtgv.DataSource = source.ToList();
+            }
         }
     }
 }

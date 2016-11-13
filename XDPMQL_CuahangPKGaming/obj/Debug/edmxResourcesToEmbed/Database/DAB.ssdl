@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GamingGearModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HANG">
+    <Key>
+      <PropertyRef Name="MaHANG" />
+    </Key>
+    <Property Name="MaHANG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tenhang" Type="nvarchar" MaxLength="30" />
+    <Property Name="Quocgia" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="MaHD" />
+    </Key>
+    <Property Name="MaHD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaTToan" Type="varchar" MaxLength="10" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="30" />
+    <Property Name="MaNV" Type="varchar" MaxLength="10" />
+    <Property Name="NgayxuatHD" Type="datetime" />
+    <Property Name="TongTienTT" Type="real" />
+  </EntityType>
+  <EntityType Name="KIEUPK">
+    <Key>
+      <PropertyRef Name="MakieuPK" />
+    </Key>
+    <Property Name="MakieuPK" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenkieuPK" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="LOAIPK">
+    <Key>
+      <PropertyRef Name="MaloaiPK" />
+    </Key>
+    <Property Name="MaloaiPK" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenloaiPK" Type="nvarchar" MaxLength="30" />
+    <Property Name="Gia" Type="real" />
+    <Property Name="MaHANG" Type="varchar" MaxLength="10" />
+    <Property Name="Thoigianbaohanh" Type="int" />
+    <Property Name="Soluongcuahang" Type="int" />
+    <Property Name="Soluongkho" Type="int" />
+    <Property Name="MaNCC" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="NHACUNGCAP">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+    </Key>
+    <Property Name="MaNCC" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenNCC" Type="nvarchar" MaxLength="30" />
+    <Property Name="Diachi" Type="nvarchar" MaxLength="50" />
+    <Property Name="soFax" Type="char" MaxLength="20" />
+    <Property Name="Mail" Type="char" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenNV" Type="nvarchar" MaxLength="30" />
+    <Property Name="NgaySinh" Type="date" />
+    <Property Name="Diachi" Type="nvarchar" MaxLength="30" />
+    <Property Name="Chucvu" Type="nvarchar" MaxLength="30" />
+    <Property Name="Luong" Type="real" />
+    <Property Name="MaTK" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PHUKIEN">
+    <Key>
+      <PropertyRef Name="MaPK" />
+    </Key>
+    <Property Name="MaPK" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaloaiPK" Type="varchar" MaxLength="10" />
+    <Property Name="MakieuPK" Type="varchar" MaxLength="10" />
+    <Property Name="Thoigianbaohanh" Type="date" />
+    <Property Name="TTDaban" Type="bit" />
+    <Property Name="Vitri" Type="bit" />
+  </EntityType>
+  <EntityType Name="PHUKIENBAOHANH">
+    <Key>
+      <PropertyRef Name="MaPK" />
+    </Key>
+    <Property Name="MaPK" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Thoigianbaohanh" Type="date" />
+    <Property Name="Hantra" Type="date" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="30" />
+    <Property Name="SDT" Type="varchar" MaxLength="12" />
+    <Property Name="SoCMND" Type="varchar" MaxLength="14" />
+    <Property Name="Trangthai" Type="bit" />
+    <Property Name="MaNV" Type="varchar" MaxLength="10" />
+    <Property Name="Ngayhoantra" Type="date" />
+    <Property Name="Ngayhoantrathucte" Type="date" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Id" Type="varchar" MaxLength="30" />
+    <Property Name="Pw" Type="varchar" MaxLength="30" />
+    <Property Name="Phanquyen" Type="int" />
+    <Property Name="MaNV" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="THANHTOAN">
+    <Key>
+      <PropertyRef Name="MaTToan" />
+    </Key>
+    <Property Name="MaTToan" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaPK" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK__HOADON__MaTToan__29572725">
+    <End Role="THANHTOAN" Type="Self.THANHTOAN" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THANHTOAN">
+        <PropertyRef Name="MaTToan" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MaTToan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOADON__TongTien__286302EC">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LOAIPK__MaNCC__164452B1">
+    <End Role="HANG" Type="Self.HANG" Multiplicity="0..1" />
+    <End Role="LOAIPK" Type="Self.LOAIPK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HANG">
+        <PropertyRef Name="MaHANG" />
+      </Principal>
+      <Dependent Role="LOAIPK">
+        <PropertyRef Name="MaHANG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LOAIPK__MaNCC__173876EA">
+    <End Role="NHACUNGCAP" Type="Self.NHACUNGCAP" Multiplicity="0..1" />
+    <End Role="LOAIPK" Type="Self.LOAIPK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACUNGCAP">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="LOAIPK">
+        <PropertyRef Name="MaNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PHUKIEN__MakieuP__1B0907CE">
+    <End Role="KIEUPK" Type="Self.KIEUPK" Multiplicity="0..1" />
+    <End Role="PHUKIEN" Type="Self.PHUKIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KIEUPK">
+        <PropertyRef Name="MakieuPK" />
+      </Principal>
+      <Dependent Role="PHUKIEN">
+        <PropertyRef Name="MakieuPK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PHUKIEN__MaloaiP__1A14E395">
+    <End Role="LOAIPK" Type="Self.LOAIPK" Multiplicity="0..1" />
+    <End Role="PHUKIEN" Type="Self.PHUKIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIPK">
+        <PropertyRef Name="MaloaiPK" />
+      </Principal>
+      <Dependent Role="PHUKIEN">
+        <PropertyRef Name="MaloaiPK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__THANHTOAN__MaPK__25869641">
+    <End Role="PHUKIEN" Type="Self.PHUKIEN" Multiplicity="0..1" />
+    <End Role="THANHTOAN" Type="Self.THANHTOAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHUKIEN">
+        <PropertyRef Name="MaPK" />
+      </Principal>
+      <Dependent Role="THANHTOAN">
+        <PropertyRef Name="MaPK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DoiMatKhau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="varchar" Mode="In" />
+    <Parameter Name="passwordcu" Type="varchar" Mode="In" />
+    <Parameter Name="passwordmoi" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GiaPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="real">
+    <Parameter Name="mpk" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SanphamHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tenhang" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MaPK" Type="varchar" MaxLength="10" />
+          <Property Name="TenloaiPK" Type="nvarchar" MaxLength="30" />
+          <Property Name="TenkieuPK" Type="nvarchar" MaxLength="30" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="TenHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="mpk" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TongKPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MakieuPK" Type="varchar" MaxLength="10" />
+          <Property Name="TenkieuPK" Type="nvarchar" MaxLength="30" />
+          <Property Name="Tongsopk" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="TongPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MaloaiPK" Type="varchar" MaxLength="10" />
+          <Property Name="TenloaiPK" Type="nvarchar" MaxLength="30" />
+          <Property Name="Tongsopk" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="XEMDSPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="maloaipk" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MaPK" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenloaiPK" Type="nvarchar" MaxLength="30" />
+          <Property Name="MakieuPK" Type="varchar" MaxLength="10" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="XEMPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mapk" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="TenloaiPK" Type="nvarchar" MaxLength="30" />
+          <Property Name="Gia" Type="real" />
+          <Property Name="Thoigianbaohanh" Type="int" />
+          <Property Name="Soluongcuahang" Type="int" />
+          <Property Name="Soluongkho" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="GamingGearModelStoreContainer">
+    <EntitySet Name="HANG" EntityType="Self.HANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KIEUPK" EntityType="Self.KIEUPK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAIPK" EntityType="Self.LOAIPK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHACUNGCAP" EntityType="Self.NHACUNGCAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHUKIEN" EntityType="Self.PHUKIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHUKIENBAOHANH" EntityType="Self.PHUKIENBAOHANH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THANHTOAN" EntityType="Self.THANHTOAN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__HOADON__MaTToan__29572725" Association="Self.FK__HOADON__MaTToan__29572725">
+      <End Role="THANHTOAN" EntitySet="THANHTOAN" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOADON__TongTien__286302EC" Association="Self.FK__HOADON__TongTien__286302EC">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LOAIPK__MaNCC__164452B1" Association="Self.FK__LOAIPK__MaNCC__164452B1">
+      <End Role="HANG" EntitySet="HANG" />
+      <End Role="LOAIPK" EntitySet="LOAIPK" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LOAIPK__MaNCC__173876EA" Association="Self.FK__LOAIPK__MaNCC__173876EA">
+      <End Role="NHACUNGCAP" EntitySet="NHACUNGCAP" />
+      <End Role="LOAIPK" EntitySet="LOAIPK" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PHUKIEN__MakieuP__1B0907CE" Association="Self.FK__PHUKIEN__MakieuP__1B0907CE">
+      <End Role="KIEUPK" EntitySet="KIEUPK" />
+      <End Role="PHUKIEN" EntitySet="PHUKIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PHUKIEN__MaloaiP__1A14E395" Association="Self.FK__PHUKIEN__MaloaiP__1A14E395">
+      <End Role="LOAIPK" EntitySet="LOAIPK" />
+      <End Role="PHUKIEN" EntitySet="PHUKIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__THANHTOAN__MaPK__25869641" Association="Self.FK__THANHTOAN__MaPK__25869641">
+      <End Role="PHUKIEN" EntitySet="PHUKIEN" />
+      <End Role="THANHTOAN" EntitySet="THANHTOAN" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
