@@ -18,6 +18,34 @@ namespace XDPMQL_CuahangPKGaming.Interface
             InitializeComponent();
         }
 
+        //Hàm khởi tạo các giá trị ban đầu
+        void Load_Start()
+        {
+            //Disable các textbox tabControl Danh mục phụ kiện
+            Disable_UpdatePK();
+        }
+        //Các hàm binding cơ sở dữ liệu
+        void BindingPhong(DataGridView dtgv)
+        {
+            Binding bdMaPK = new Binding("Text", dtgv.DataSource, "Mã_phụ_kiện", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtMaPK.DataBindings.Clear();
+            txtMaPK.DataBindings.Add(bdMaPK);
+
+            Binding bdLoaiPK = new Binding("Text", dtgv.DataSource, "Loại_phụ_kiện", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtLoaiPK.DataBindings.Clear();
+            txtLoaiPK.DataBindings.Add(bdLoaiPK);
+
+            Binding bdGia = new Binding("Text", dtgv.DataSource, "Giá", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtGiapk.DataBindings.Clear();
+            txtGiapk.DataBindings.Add(bdGia);
+
+            Binding bdKieuPK= new Binding("Text", dtgv.DataSource, "Kiểu_phụ_kiện", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtKieuPK.DataBindings.Clear();
+            txtKieuPK.DataBindings.Add(bdKieuPK);
+
+            
+        }
+
         private void danhMụcSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -190,7 +218,7 @@ namespace XDPMQL_CuahangPKGaming.Interface
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void cbbTimkiem_SelectedIndexChanged(object sender, EventArgs e)
@@ -235,6 +263,7 @@ namespace XDPMQL_CuahangPKGaming.Interface
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //Tạo mới hóa đơn
 
         }
 
@@ -335,7 +364,29 @@ namespace XDPMQL_CuahangPKGaming.Interface
 
         private void Form_QLKDPK_Load(object sender, EventArgs e)
         {
+            Load_Start();
             Load_DSPK(dtgVDSPK);
+            Load_DMPK(dtgvDMPK);
+            Load_DMNCC(dtgvDMNCC);
+        }
+        void Load_DMPK(DataGridView dtgv)
+        {
+            using (GamingGearEntities db = new GamingGearEntities())
+            {
+                var source = from pk in db.PHUKIENs
+                             from lpk in db.LOAIPKs
+                             from kpk in db.KIEUPKs
+                             where pk.MakieuPK == kpk.MakieuPK & pk.MaloaiPK == lpk.MaloaiPK
+                             select new
+                             {
+                                 Mã_phụ_kiện = pk.MaPK,
+                                 Loại_phụ_kiện = lpk.TenloaiPK,
+                                 Kiểu_phụ_kiện = kpk.TenkieuPK,
+                                 Giá = lpk.Gia
+                             };
+
+                dtgv.DataSource = source.ToList();
+            }
         }
         void Load_DSPK(DataGridView dtgv)
         {
@@ -344,16 +395,125 @@ namespace XDPMQL_CuahangPKGaming.Interface
                 var source = from pk in db.PHUKIENs
                              from lpk in db.LOAIPKs
                              from kpk in db.KIEUPKs
-                             where pk.MakieuPK == kpk.MakieuPK & pk.MaloaiPK == lpk.MaloaiPK 
+                             from hpk in db.HANGs
+                             where pk.MakieuPK == kpk.MakieuPK & pk.MaloaiPK == lpk.MaloaiPK & lpk.MaHANG==hpk.MaHANG
                              select new{
-                              Mã_phụ_kiện = pk.MaloaiPK,
-                              Loại_phụ_kiện = lpk.MaloaiPK,
+                              Mã_phụ_kiện = pk.MaPK,
+                              Loại_phụ_kiện = lpk.TenloaiPK,
                               Kiểu_phụ_kiện = kpk.TenkieuPK,
+                              Hãng=hpk.Tenhang,
                               Giá = lpk.Gia
                              };
 
                 dtgv.DataSource = source.ToList();
             }
+        }
+        void Load_DMNCC(DataGridView dtgv)
+        {
+            using (GamingGearEntities db = new GamingGearEntities())
+            {
+                var source = from pk in db.NHACUNGCAPs
+                             select new
+                             {
+                                 Mã_nhà_cung_cấp = pk.MaNCC,
+                                 Tên_nhà_cung_cấp = pk.TenNCC,
+                                 Địa_chỉ = pk.Diachi,
+                                 Số_Fax = pk.soFax,
+                                 Mail = pk.Mail
+                             };
+
+                dtgv.DataSource = source.ToList();
+            }
+        }
+        void Disable_UpdatePK()
+        {
+            txtMaPK.Enabled = false;
+            txtLoaiPK.Enabled = false;
+            txtKieuPK.Enabled = false;
+            txtHangpk.Enabled = false;
+            txtGiapk.Enabled = false;
+            txtSLCHpk.Enabled = false;
+            txtSLKpk.Enabled = false;
+        }
+        void Enable_UpdatePK()
+        {
+            txtMaPK.Enabled = true;
+            txtLoaiPK.Enabled = true;
+            txtKieuPK.Enabled = true;
+            txtHangpk.Enabled = true;
+            txtGiapk.Enabled = true;
+            txtSLCHpk.Enabled = true;
+            txtSLKpk.Enabled = true;
+        }
+
+        private void dtgvDMPK_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgvDMPK_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dtgvDMPK.SelectedCells.Count == 0)
+                return;
+            string MaPK = dtgvDMPK.SelectedCells[0].OwningRow.Cells["Mã_phụ_kiện"].Value.ToString();
+            BindingPhong(dtgvDMPK);
+        }
+
+        private bool boolChinhsuaPK = false; //Biến bool kiểm tra chỉnh sửa thông tin phụ kiện trong tabControl Danh mục phụ kiện
+      
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (boolChinhsuaPK == false)
+            {
+                boolChinhsuaPK = true;
+                btnChinhsuaPK.Text = "Hủy";
+                Enable_UpdatePK();
+            }
+            else
+            {
+                boolChinhsuaPK = false;
+                btnChinhsuaPK.Text = "Chỉnh sửa thông tin";
+                Disable_UpdatePK();
+            }
+           
+        }
+
+        private void dtgVDSPK_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+        public int _stt = 0;
+        private void dtgVDSPK_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (dtgVDSPK.CurrentCell == null)
+                return;
+            try
+            {
+                int r = this.dtgVDSPK.CurrentCell.RowIndex;
+                int c = this.dtgVDSPK.CurrentCell.ColumnIndex;
+                string _MaPK = dtgVDSPK.Rows[r].Cells[0].Value.ToString();
+                string _KieuPK = dtgVDSPK.Rows[r].Cells[1].Value.ToString();
+                string _LoaiPK = dtgVDSPK.Rows[r].Cells[2].Value.ToString();
+                string _Hang = dtgVDSPK.Rows[r].Cells[3].Value.ToString();
+                string _Gia = dtgVDSPK.Rows[r].Cells[4].Value.ToString();
+                _stt ++;
+                dtgvGiohang.Rows.Add(_stt.ToString(), _MaPK.ToString(), _KieuPK.ToString(),_LoaiPK.ToString() ,_Hang.ToString(), _Gia.ToString());
+                ThongTinHoaDon();
+            }
+            catch
+            {
+                ThongTinHoaDon();
+            }
+        }
+        private void ThongTinHoaDon()
+        {
+            float Tienhang = 0;
+            for (int i = 0; i < _stt; i++)
+            {
+                string MPK = dtgvGiohang.Rows[i].Cells[5].Value.ToString();
+                txtTienhang.Text = MPK.ToString();
+            }
+            
         }
     }
 }

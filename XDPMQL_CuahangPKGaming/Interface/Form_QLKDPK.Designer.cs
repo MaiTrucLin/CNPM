@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Danh mục nhà cung cấp");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Danh mục hãng");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Báo cáo lợi nhuận theo phụ kiện");
@@ -81,31 +80,34 @@
             this.menuTrogiup_Infomation = new System.Windows.Forms.ToolStripMenuItem();
             this.tbThuNgan = new System.Windows.Forms.TabControl();
             this.tbP_Hoadonbanhang = new System.Windows.Forms.TabPage();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTongtien = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.txtTiengiamgia = new System.Windows.Forms.TextBox();
+            this.nmrGiamgia = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTienhang = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtgvGiohang = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KieuPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HangPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMahoadon = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtKhachHang = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.btnTaomoihoadon = new System.Windows.Forms.Button();
+            this.btnXoaPKhd = new System.Windows.Forms.Button();
+            this.btnThempk = new System.Windows.Forms.Button();
             this.btn_Timkiem = new System.Windows.Forms.Button();
             this.txtBox_Timkiem = new System.Windows.Forms.TextBox();
             this.cbbTimkiem = new System.Windows.Forms.ComboBox();
@@ -138,26 +140,26 @@
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.tbP_Danhmucphukien = new System.Windows.Forms.TabPage();
             this.button13 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txtKieuPK = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.btnChinhsuaPK = new System.Windows.Forms.Button();
+            this.txtSLKpk = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtSLCHpk = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtGiapk = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtHangpk = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtLoaiPK = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtMaPK = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dtgvDMPK = new System.Windows.Forms.DataGridView();
             this.tbP_DanhmucNCC = new System.Windows.Forms.TabPage();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -174,7 +176,7 @@
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.button14 = new System.Windows.Forms.Button();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.dtgvDMNCC = new System.Windows.Forms.DataGridView();
             this.tbP_Baocao = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -184,14 +186,12 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.tbThuNgan.SuspendLayout();
             this.tbP_Hoadonbanhang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrGiamgia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGiohang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVDSPK)).BeginInit();
             this.tbP_Thongkedoanhthu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -200,9 +200,9 @@
             this.tbP_Thongkephukien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.tbP_Danhmucphukien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDMPK)).BeginInit();
             this.tbP_DanhmucNCC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDMNCC)).BeginInit();
             this.tbP_Baocao.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -434,31 +434,28 @@
             // tbP_Hoadonbanhang
             // 
             this.tbP_Hoadonbanhang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tbP_Hoadonbanhang.Controls.Add(this.textBox6);
+            this.tbP_Hoadonbanhang.Controls.Add(this.txtTongtien);
             this.tbP_Hoadonbanhang.Controls.Add(this.label9);
-            this.tbP_Hoadonbanhang.Controls.Add(this.textBox5);
-            this.tbP_Hoadonbanhang.Controls.Add(this.numericUpDown2);
+            this.tbP_Hoadonbanhang.Controls.Add(this.txtTiengiamgia);
+            this.tbP_Hoadonbanhang.Controls.Add(this.nmrGiamgia);
             this.tbP_Hoadonbanhang.Controls.Add(this.label8);
-            this.tbP_Hoadonbanhang.Controls.Add(this.textBox4);
+            this.tbP_Hoadonbanhang.Controls.Add(this.txtTienhang);
             this.tbP_Hoadonbanhang.Controls.Add(this.label7);
-            this.tbP_Hoadonbanhang.Controls.Add(this.dataGridView2);
+            this.tbP_Hoadonbanhang.Controls.Add(this.dtgvGiohang);
             this.tbP_Hoadonbanhang.Controls.Add(this.textBox3);
             this.tbP_Hoadonbanhang.Controls.Add(this.label6);
-            this.tbP_Hoadonbanhang.Controls.Add(this.textBox2);
+            this.tbP_Hoadonbanhang.Controls.Add(this.txtMahoadon);
             this.tbP_Hoadonbanhang.Controls.Add(this.label5);
             this.tbP_Hoadonbanhang.Controls.Add(this.dateTimePicker1);
             this.tbP_Hoadonbanhang.Controls.Add(this.label4);
-            this.tbP_Hoadonbanhang.Controls.Add(this.textBox1);
+            this.tbP_Hoadonbanhang.Controls.Add(this.txtKhachHang);
             this.tbP_Hoadonbanhang.Controls.Add(this.label3);
             this.tbP_Hoadonbanhang.Controls.Add(this.label2);
-            this.tbP_Hoadonbanhang.Controls.Add(this.button6);
-            this.tbP_Hoadonbanhang.Controls.Add(this.button5);
-            this.tbP_Hoadonbanhang.Controls.Add(this.button4);
-            this.tbP_Hoadonbanhang.Controls.Add(this.button3);
-            this.tbP_Hoadonbanhang.Controls.Add(this.button2);
-            this.tbP_Hoadonbanhang.Controls.Add(this.button1);
-            this.tbP_Hoadonbanhang.Controls.Add(this.label1);
-            this.tbP_Hoadonbanhang.Controls.Add(this.numericUpDown1);
+            this.tbP_Hoadonbanhang.Controls.Add(this.btnThongKe);
+            this.tbP_Hoadonbanhang.Controls.Add(this.btnThanhToan);
+            this.tbP_Hoadonbanhang.Controls.Add(this.btnTaomoihoadon);
+            this.tbP_Hoadonbanhang.Controls.Add(this.btnXoaPKhd);
+            this.tbP_Hoadonbanhang.Controls.Add(this.btnThempk);
             this.tbP_Hoadonbanhang.Controls.Add(this.btn_Timkiem);
             this.tbP_Hoadonbanhang.Controls.Add(this.txtBox_Timkiem);
             this.tbP_Hoadonbanhang.Controls.Add(this.cbbTimkiem);
@@ -472,14 +469,14 @@
             this.tbP_Hoadonbanhang.UseWaitCursor = true;
             this.tbP_Hoadonbanhang.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // textBox6
+            // txtTongtien
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(771, 446);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(299, 27);
-            this.textBox6.TabIndex = 42;
-            this.textBox6.UseWaitCursor = true;
+            this.txtTongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongtien.Location = new System.Drawing.Point(771, 446);
+            this.txtTongtien.Name = "txtTongtien";
+            this.txtTongtien.Size = new System.Drawing.Size(299, 27);
+            this.txtTongtien.TabIndex = 42;
+            this.txtTongtien.UseWaitCursor = true;
             // 
             // label9
             // 
@@ -492,23 +489,23 @@
             this.label9.Text = "Tổng tiền";
             this.label9.UseWaitCursor = true;
             // 
-            // textBox5
+            // txtTiengiamgia
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(849, 410);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(221, 24);
-            this.textBox5.TabIndex = 40;
-            this.textBox5.UseWaitCursor = true;
+            this.txtTiengiamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTiengiamgia.Location = new System.Drawing.Point(849, 410);
+            this.txtTiengiamgia.Name = "txtTiengiamgia";
+            this.txtTiengiamgia.Size = new System.Drawing.Size(221, 24);
+            this.txtTiengiamgia.TabIndex = 40;
+            this.txtTiengiamgia.UseWaitCursor = true;
             // 
-            // numericUpDown2
+            // nmrGiamgia
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(771, 410);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(55, 24);
-            this.numericUpDown2.TabIndex = 39;
-            this.numericUpDown2.UseWaitCursor = true;
+            this.nmrGiamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrGiamgia.Location = new System.Drawing.Point(771, 410);
+            this.nmrGiamgia.Name = "nmrGiamgia";
+            this.nmrGiamgia.Size = new System.Drawing.Size(55, 24);
+            this.nmrGiamgia.TabIndex = 39;
+            this.nmrGiamgia.UseWaitCursor = true;
             // 
             // label8
             // 
@@ -521,14 +518,14 @@
             this.label8.Text = "Giảm giá";
             this.label8.UseWaitCursor = true;
             // 
-            // textBox4
+            // txtTienhang
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(771, 383);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(299, 24);
-            this.textBox4.TabIndex = 37;
-            this.textBox4.UseWaitCursor = true;
+            this.txtTienhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienhang.Location = new System.Drawing.Point(771, 383);
+            this.txtTienhang.Name = "txtTienhang";
+            this.txtTienhang.Size = new System.Drawing.Size(299, 24);
+            this.txtTienhang.TabIndex = 37;
+            this.txtTienhang.UseWaitCursor = true;
             // 
             // label7
             // 
@@ -541,15 +538,56 @@
             this.label7.Text = "Tiền hàng";
             this.label7.UseWaitCursor = true;
             // 
-            // dataGridView2
+            // dtgvGiohang
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(542, 139);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(526, 209);
-            this.dataGridView2.TabIndex = 21;
-            this.dataGridView2.UseWaitCursor = true;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dtgvGiohang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvGiohang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.MaPK,
+            this.KieuPK,
+            this.LoaiPK,
+            this.HangPK,
+            this.Gia});
+            this.dtgvGiohang.Location = new System.Drawing.Point(542, 139);
+            this.dtgvGiohang.Name = "dtgvGiohang";
+            this.dtgvGiohang.Size = new System.Drawing.Size(526, 209);
+            this.dtgvGiohang.TabIndex = 21;
+            this.dtgvGiohang.UseWaitCursor = true;
+            this.dtgvGiohang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 42;
+            // 
+            // MaPK
+            // 
+            this.MaPK.HeaderText = "Mã phụ kiện";
+            this.MaPK.Name = "MaPK";
+            // 
+            // KieuPK
+            // 
+            this.KieuPK.HeaderText = "Kiểu";
+            this.KieuPK.Name = "KieuPK";
+            this.KieuPK.Width = 80;
+            // 
+            // LoaiPK
+            // 
+            this.LoaiPK.HeaderText = "Loại";
+            this.LoaiPK.Name = "LoaiPK";
+            this.LoaiPK.Width = 80;
+            // 
+            // HangPK
+            // 
+            this.HangPK.HeaderText = "Hãng";
+            this.HangPK.Name = "HangPK";
+            this.HangPK.Width = 80;
+            // 
+            // Gia
+            // 
+            this.Gia.HeaderText = "Giá";
+            this.Gia.Name = "Gia";
             // 
             // textBox3
             // 
@@ -571,14 +609,14 @@
             this.label6.UseWaitCursor = true;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox2
+            // txtMahoadon
             // 
-            this.textBox2.Location = new System.Drawing.Point(907, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(106, 20);
-            this.textBox2.TabIndex = 18;
-            this.textBox2.UseWaitCursor = true;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtMahoadon.Location = new System.Drawing.Point(907, 75);
+            this.txtMahoadon.Name = "txtMahoadon";
+            this.txtMahoadon.Size = new System.Drawing.Size(106, 20);
+            this.txtMahoadon.TabIndex = 18;
+            this.txtMahoadon.UseWaitCursor = true;
+            this.txtMahoadon.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label5
             // 
@@ -611,14 +649,14 @@
             this.label4.UseWaitCursor = true;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // txtKhachHang
             // 
-            this.textBox1.Location = new System.Drawing.Point(631, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(382, 20);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.UseWaitCursor = true;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtKhachHang.Location = new System.Drawing.Point(631, 48);
+            this.txtKhachHang.Name = "txtKhachHang";
+            this.txtKhachHang.Size = new System.Drawing.Size(382, 20);
+            this.txtKhachHang.TabIndex = 14;
+            this.txtKhachHang.UseWaitCursor = true;
+            this.txtKhachHang.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -643,91 +681,60 @@
             this.label2.UseWaitCursor = true;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // button6
+            // btnThongKe
             // 
-            this.button6.Location = new System.Drawing.Point(415, 414);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(93, 47);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Thống kê";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.UseWaitCursor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnThongKe.Location = new System.Drawing.Point(415, 414);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(93, 47);
+            this.btnThongKe.TabIndex = 11;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.UseWaitCursor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // btnThanhToan
             // 
-            this.button5.Location = new System.Drawing.Point(415, 361);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(93, 47);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Thanh toán";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.UseWaitCursor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnThanhToan.Location = new System.Drawing.Point(415, 361);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(93, 47);
+            this.btnThanhToan.TabIndex = 10;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.UseWaitCursor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnTaomoihoadon
             // 
-            this.button4.Location = new System.Drawing.Point(415, 222);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 47);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Tạo hóa đơn mới";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.UseWaitCursor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnTaomoihoadon.Location = new System.Drawing.Point(415, 284);
+            this.btnTaomoihoadon.Name = "btnTaomoihoadon";
+            this.btnTaomoihoadon.Size = new System.Drawing.Size(93, 47);
+            this.btnTaomoihoadon.TabIndex = 9;
+            this.btnTaomoihoadon.Text = "Tạo hóa đơn mới";
+            this.btnTaomoihoadon.UseVisualStyleBackColor = true;
+            this.btnTaomoihoadon.UseWaitCursor = true;
+            this.btnTaomoihoadon.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnXoaPKhd
             // 
-            this.button3.Location = new System.Drawing.Point(415, 181);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.UseWaitCursor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnXoaPKhd.Location = new System.Drawing.Point(415, 189);
+            this.btnXoaPKhd.Name = "btnXoaPKhd";
+            this.btnXoaPKhd.Size = new System.Drawing.Size(93, 40);
+            this.btnXoaPKhd.TabIndex = 8;
+            this.btnXoaPKhd.Text = "Xóa";
+            this.btnXoaPKhd.UseVisualStyleBackColor = true;
+            this.btnXoaPKhd.UseWaitCursor = true;
+            this.btnXoaPKhd.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnThempk
             // 
-            this.button2.Location = new System.Drawing.Point(415, 152);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Giảm";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.UseWaitCursor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(415, 123);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.UseWaitCursor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(415, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Số lượng";
-            this.label1.UseWaitCursor = true;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(415, 97);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown1.TabIndex = 4;
-            this.numericUpDown1.UseWaitCursor = true;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.btnThempk.Location = new System.Drawing.Point(415, 139);
+            this.btnThempk.Name = "btnThempk";
+            this.btnThempk.Size = new System.Drawing.Size(93, 44);
+            this.btnThempk.TabIndex = 6;
+            this.btnThempk.Text = "Thêm";
+            this.btnThempk.UseVisualStyleBackColor = true;
+            this.btnThempk.UseWaitCursor = true;
+            this.btnThempk.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Timkiem
             // 
@@ -767,7 +774,9 @@
             this.dtgVDSPK.Size = new System.Drawing.Size(402, 463);
             this.dtgVDSPK.TabIndex = 0;
             this.dtgVDSPK.UseWaitCursor = true;
+            this.dtgVDSPK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgVDSPK_CellClick);
             this.dtgVDSPK.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dtgVDSPK.CurrentCellChanged += new System.EventHandler(this.dtgVDSPK_CurrentCellChanged);
             // 
             // tbP_Thongkedoanhthu
             // 
@@ -1048,26 +1057,26 @@
             // tbP_Danhmucphukien
             // 
             this.tbP_Danhmucphukien.Controls.Add(this.button13);
-            this.tbP_Danhmucphukien.Controls.Add(this.textBox17);
+            this.tbP_Danhmucphukien.Controls.Add(this.txtKieuPK);
             this.tbP_Danhmucphukien.Controls.Add(this.label28);
-            this.tbP_Danhmucphukien.Controls.Add(this.button12);
-            this.tbP_Danhmucphukien.Controls.Add(this.textBox16);
+            this.tbP_Danhmucphukien.Controls.Add(this.btnChinhsuaPK);
+            this.tbP_Danhmucphukien.Controls.Add(this.txtSLKpk);
             this.tbP_Danhmucphukien.Controls.Add(this.label27);
-            this.tbP_Danhmucphukien.Controls.Add(this.textBox15);
+            this.tbP_Danhmucphukien.Controls.Add(this.txtSLCHpk);
             this.tbP_Danhmucphukien.Controls.Add(this.label26);
-            this.tbP_Danhmucphukien.Controls.Add(this.textBox14);
+            this.tbP_Danhmucphukien.Controls.Add(this.txtGiapk);
             this.tbP_Danhmucphukien.Controls.Add(this.label25);
-            this.tbP_Danhmucphukien.Controls.Add(this.textBox13);
+            this.tbP_Danhmucphukien.Controls.Add(this.txtHangpk);
             this.tbP_Danhmucphukien.Controls.Add(this.label24);
-            this.tbP_Danhmucphukien.Controls.Add(this.textBox12);
+            this.tbP_Danhmucphukien.Controls.Add(this.txtLoaiPK);
             this.tbP_Danhmucphukien.Controls.Add(this.label23);
             this.tbP_Danhmucphukien.Controls.Add(this.label22);
             this.tbP_Danhmucphukien.Controls.Add(this.label21);
-            this.tbP_Danhmucphukien.Controls.Add(this.textBox11);
+            this.tbP_Danhmucphukien.Controls.Add(this.txtMaPK);
             this.tbP_Danhmucphukien.Controls.Add(this.button11);
             this.tbP_Danhmucphukien.Controls.Add(this.textBox10);
             this.tbP_Danhmucphukien.Controls.Add(this.comboBox4);
-            this.tbP_Danhmucphukien.Controls.Add(this.dataGridView6);
+            this.tbP_Danhmucphukien.Controls.Add(this.dtgvDMPK);
             this.tbP_Danhmucphukien.Location = new System.Drawing.Point(4, 22);
             this.tbP_Danhmucphukien.Name = "tbP_Danhmucphukien";
             this.tbP_Danhmucphukien.Size = new System.Drawing.Size(1101, 521);
@@ -1085,13 +1094,13 @@
             this.button13.UseVisualStyleBackColor = true;
             this.button13.UseWaitCursor = true;
             // 
-            // textBox17
+            // txtKieuPK
             // 
-            this.textBox17.Location = new System.Drawing.Point(720, 170);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(190, 20);
-            this.textBox17.TabIndex = 28;
-            this.textBox17.UseWaitCursor = true;
+            this.txtKieuPK.Location = new System.Drawing.Point(720, 170);
+            this.txtKieuPK.Name = "txtKieuPK";
+            this.txtKieuPK.Size = new System.Drawing.Size(190, 20);
+            this.txtKieuPK.TabIndex = 28;
+            this.txtKieuPK.UseWaitCursor = true;
             // 
             // label28
             // 
@@ -1103,23 +1112,24 @@
             this.label28.Text = "Kiểu phụ kiện";
             this.label28.UseWaitCursor = true;
             // 
-            // button12
+            // btnChinhsuaPK
             // 
-            this.button12.Location = new System.Drawing.Point(683, 404);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(128, 23);
-            this.button12.TabIndex = 26;
-            this.button12.Text = "Chỉnh sửa thông tin";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.UseWaitCursor = true;
+            this.btnChinhsuaPK.Location = new System.Drawing.Point(683, 404);
+            this.btnChinhsuaPK.Name = "btnChinhsuaPK";
+            this.btnChinhsuaPK.Size = new System.Drawing.Size(128, 23);
+            this.btnChinhsuaPK.TabIndex = 26;
+            this.btnChinhsuaPK.Text = "Chỉnh sửa thông tin";
+            this.btnChinhsuaPK.UseVisualStyleBackColor = true;
+            this.btnChinhsuaPK.UseWaitCursor = true;
+            this.btnChinhsuaPK.Click += new System.EventHandler(this.button12_Click);
             // 
-            // textBox16
+            // txtSLKpk
             // 
-            this.textBox16.Location = new System.Drawing.Point(720, 318);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(190, 20);
-            this.textBox16.TabIndex = 25;
-            this.textBox16.UseWaitCursor = true;
+            this.txtSLKpk.Location = new System.Drawing.Point(720, 318);
+            this.txtSLKpk.Name = "txtSLKpk";
+            this.txtSLKpk.Size = new System.Drawing.Size(190, 20);
+            this.txtSLKpk.TabIndex = 25;
+            this.txtSLKpk.UseWaitCursor = true;
             // 
             // label27
             // 
@@ -1131,13 +1141,13 @@
             this.label27.Text = "Số lượng kho";
             this.label27.UseWaitCursor = true;
             // 
-            // textBox15
+            // txtSLCHpk
             // 
-            this.textBox15.Location = new System.Drawing.Point(720, 279);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(190, 20);
-            this.textBox15.TabIndex = 23;
-            this.textBox15.UseWaitCursor = true;
+            this.txtSLCHpk.Location = new System.Drawing.Point(720, 279);
+            this.txtSLCHpk.Name = "txtSLCHpk";
+            this.txtSLCHpk.Size = new System.Drawing.Size(190, 20);
+            this.txtSLCHpk.TabIndex = 23;
+            this.txtSLCHpk.UseWaitCursor = true;
             // 
             // label26
             // 
@@ -1149,13 +1159,13 @@
             this.label26.Text = "Số lượng cửa hàng";
             this.label26.UseWaitCursor = true;
             // 
-            // textBox14
+            // txtGiapk
             // 
-            this.textBox14.Location = new System.Drawing.Point(720, 243);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(190, 20);
-            this.textBox14.TabIndex = 21;
-            this.textBox14.UseWaitCursor = true;
+            this.txtGiapk.Location = new System.Drawing.Point(720, 243);
+            this.txtGiapk.Name = "txtGiapk";
+            this.txtGiapk.Size = new System.Drawing.Size(190, 20);
+            this.txtGiapk.TabIndex = 21;
+            this.txtGiapk.UseWaitCursor = true;
             // 
             // label25
             // 
@@ -1167,13 +1177,13 @@
             this.label25.Text = "Giá";
             this.label25.UseWaitCursor = true;
             // 
-            // textBox13
+            // txtHangpk
             // 
-            this.textBox13.Location = new System.Drawing.Point(720, 205);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(190, 20);
-            this.textBox13.TabIndex = 19;
-            this.textBox13.UseWaitCursor = true;
+            this.txtHangpk.Location = new System.Drawing.Point(720, 205);
+            this.txtHangpk.Name = "txtHangpk";
+            this.txtHangpk.Size = new System.Drawing.Size(190, 20);
+            this.txtHangpk.TabIndex = 19;
+            this.txtHangpk.UseWaitCursor = true;
             // 
             // label24
             // 
@@ -1185,13 +1195,13 @@
             this.label24.Text = "Hãng";
             this.label24.UseWaitCursor = true;
             // 
-            // textBox12
+            // txtLoaiPK
             // 
-            this.textBox12.Location = new System.Drawing.Point(720, 134);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(190, 20);
-            this.textBox12.TabIndex = 17;
-            this.textBox12.UseWaitCursor = true;
+            this.txtLoaiPK.Location = new System.Drawing.Point(720, 134);
+            this.txtLoaiPK.Name = "txtLoaiPK";
+            this.txtLoaiPK.Size = new System.Drawing.Size(190, 20);
+            this.txtLoaiPK.TabIndex = 17;
+            this.txtLoaiPK.UseWaitCursor = true;
             // 
             // label23
             // 
@@ -1224,13 +1234,13 @@
             this.label21.Text = "Mã phụ kiện";
             this.label21.UseWaitCursor = true;
             // 
-            // textBox11
+            // txtMaPK
             // 
-            this.textBox11.Location = new System.Drawing.Point(720, 95);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(190, 20);
-            this.textBox11.TabIndex = 8;
-            this.textBox11.UseWaitCursor = true;
+            this.txtMaPK.Location = new System.Drawing.Point(720, 95);
+            this.txtMaPK.Name = "txtMaPK";
+            this.txtMaPK.Size = new System.Drawing.Size(190, 20);
+            this.txtMaPK.TabIndex = 8;
+            this.txtMaPK.UseWaitCursor = true;
             // 
             // button11
             // 
@@ -1259,14 +1269,16 @@
             this.comboBox4.TabIndex = 5;
             this.comboBox4.UseWaitCursor = true;
             // 
-            // dataGridView6
+            // dtgvDMPK
             // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(40, 55);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(402, 463);
-            this.dataGridView6.TabIndex = 4;
-            this.dataGridView6.UseWaitCursor = true;
+            this.dtgvDMPK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDMPK.Location = new System.Drawing.Point(40, 55);
+            this.dtgvDMPK.Name = "dtgvDMPK";
+            this.dtgvDMPK.Size = new System.Drawing.Size(402, 463);
+            this.dtgvDMPK.TabIndex = 4;
+            this.dtgvDMPK.UseWaitCursor = true;
+            this.dtgvDMPK.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDMPK_CellContentClick);
+            this.dtgvDMPK.SelectionChanged += new System.EventHandler(this.dtgvDMPK_SelectionChanged);
             // 
             // tbP_DanhmucNCC
             // 
@@ -1285,7 +1297,7 @@
             this.tbP_DanhmucNCC.Controls.Add(this.textBox25);
             this.tbP_DanhmucNCC.Controls.Add(this.button14);
             this.tbP_DanhmucNCC.Controls.Add(this.textBox18);
-            this.tbP_DanhmucNCC.Controls.Add(this.dataGridView7);
+            this.tbP_DanhmucNCC.Controls.Add(this.dtgvDMNCC);
             this.tbP_DanhmucNCC.Location = new System.Drawing.Point(4, 22);
             this.tbP_DanhmucNCC.Name = "tbP_DanhmucNCC";
             this.tbP_DanhmucNCC.Size = new System.Drawing.Size(1101, 521);
@@ -1432,14 +1444,14 @@
             this.textBox18.TabIndex = 9;
             this.textBox18.UseWaitCursor = true;
             // 
-            // dataGridView7
+            // dtgvDMNCC
             // 
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(36, 53);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(402, 463);
-            this.dataGridView7.TabIndex = 8;
-            this.dataGridView7.UseWaitCursor = true;
+            this.dtgvDMNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDMNCC.Location = new System.Drawing.Point(36, 53);
+            this.dtgvDMNCC.Name = "dtgvDMNCC";
+            this.dtgvDMNCC.Size = new System.Drawing.Size(402, 463);
+            this.dtgvDMNCC.TabIndex = 8;
+            this.dtgvDMNCC.UseWaitCursor = true;
             // 
             // tbP_Baocao
             // 
@@ -1562,11 +1574,6 @@
             this.treeView1.Size = new System.Drawing.Size(173, 521);
             this.treeView1.TabIndex = 1;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // Form_QLKDPK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1586,9 +1593,8 @@
             this.tbThuNgan.ResumeLayout(false);
             this.tbP_Hoadonbanhang.ResumeLayout(false);
             this.tbP_Hoadonbanhang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrGiamgia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGiohang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVDSPK)).EndInit();
             this.tbP_Thongkedoanhthu.ResumeLayout(false);
             this.tbP_Thongkedoanhthu.PerformLayout();
@@ -1600,10 +1606,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.tbP_Danhmucphukien.ResumeLayout(false);
             this.tbP_Danhmucphukien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDMPK)).EndInit();
             this.tbP_DanhmucNCC.ResumeLayout(false);
             this.tbP_DanhmucNCC.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDMNCC)).EndInit();
             this.tbP_Baocao.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1642,36 +1648,33 @@
         private System.Windows.Forms.ToolStripMenuItem menuBaocao;
         private System.Windows.Forms.ToolStripMenuItem menuThoat;
         private System.Windows.Forms.TabControl tbThuNgan;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dtgvGiohang;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMahoadon;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtKhachHang;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.Button btnTaomoihoadon;
+        private System.Windows.Forms.Button btnXoaPKhd;
+        private System.Windows.Forms.Button btnThempk;
         private System.Windows.Forms.Button btn_Timkiem;
         private System.Windows.Forms.TextBox txtBox_Timkiem;
         private System.Windows.Forms.ComboBox cbbTimkiem;
         private System.Windows.Forms.DataGridView dtgVDSPK;
         private System.Windows.Forms.TabPage tbP_Thongkedoanhthu;
         protected internal System.Windows.Forms.TabPage tbP_Hoadonbanhang;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTongtien;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.TextBox txtTiengiamgia;
+        private System.Windows.Forms.NumericUpDown nmrGiamgia;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTienhang;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label12;
@@ -1686,7 +1689,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
@@ -1711,26 +1713,26 @@
         private System.Windows.Forms.TabPage tbP_Danhmucphukien;
         private System.Windows.Forms.TabPage tbP_DanhmucNCC;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txtKieuPK;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Button btnChinhsuaPK;
+        private System.Windows.Forms.TextBox txtSLKpk;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtSLCHpk;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtGiapk;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtHangpk;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtLoaiPK;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtMaPK;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dtgvDMPK;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.TextBox textBox19;
@@ -1746,6 +1748,12 @@
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.DataGridView dtgvDMNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KieuPK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HangPK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
     }
 }

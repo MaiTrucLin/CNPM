@@ -64,7 +64,6 @@
             // btnBegin
             // 
             this.btnBegin.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnBegin.Enabled = false;
             this.btnBegin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBegin.Location = new System.Drawing.Point(369, 330);
             this.btnBegin.Name = "btnBegin";

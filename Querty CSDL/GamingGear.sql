@@ -200,7 +200,8 @@ end
 
 
 
-
+--Hàm trả về mã phụ kiện mới để thêm mới phụ kiện
+CREATE FUCTION fc
 --Hàm trả về kiểu vô hướng
 --Hàm trả về giá của phụ kiên
 CREATE FUNCTION GiaPK(@mpk varchar(10)) 

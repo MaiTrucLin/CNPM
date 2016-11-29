@@ -45,6 +45,8 @@ namespace XDPMQL_CuahangPKGaming
         private void timer1_Tick(object sender, EventArgs e)
         {
             pgBar_load.Increment(1);
+            // Thời gian chờ chương trình khởi động
+
             if(pgBar_load.Value==100)
             {
                 timer1.Stop();
